@@ -47,3 +47,5 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: 'Please provide name of the dish' });
   }
 });
+
+module.exports = router;

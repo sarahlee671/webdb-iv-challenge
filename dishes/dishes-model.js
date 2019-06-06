@@ -12,7 +12,9 @@ function getDishes() {
 
 function getDish(id) {
     return db('dishes')
-        .where({id})
+        .join('dishes', 'recipes.dish_id', 'dishes.id')
+        .select('dishes.id', 'dishes.name', {recipe: 'recipes.name'})
+        .where('dishes.id', id)
         .first();
 }
 
