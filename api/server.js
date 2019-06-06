@@ -1,8 +1,5 @@
 const express = require('express');
 const helmet = require('helmet')
-const knex = require('knex');
-
-const knexConfig = require('../knexfile.js');
 
 const recipesRouter = require('../recipes/recipes-router.js')
 const dishesRouter = require('../dishes/dishes-router.js')
