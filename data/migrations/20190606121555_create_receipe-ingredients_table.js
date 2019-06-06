@@ -21,7 +21,7 @@ exports.up = function(knex, Promise) {
                 .onUpdate('CASCADE')
 
             tbl //needed quantity of ingredient
-                .integer('quantity')
+                .float('quantity')
                 .notNullable()
         })
   
